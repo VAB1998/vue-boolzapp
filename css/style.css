@@ -1,25 +1,48 @@
 
 /* ------User Bar------ */
 #user_bar{
-    height: 50px;
+    /* Style */
     background-color: #eaeaea;
+    /* Spacing and Dimensions */
+    height: 50px;
 }
 
 /* ------Alerts Bar------ */
 #alerts_bar{
-    height: 60px;
+    /* Style */
     background-color: #8edafc;
+    /* Spacing and Dimensions */
+    height: 60px;
 }
 
 /* ------Search Bar------ */
 #search_bar{
-    height: 40px;
+    /* Style */
     background-color: #e3e3e3;
+    /* Spacing and Dimensions */
+    height: 40px;
 }
 
 
 /* ------Chats List----- */
 #chats-list{
-    overflow-y: scroll;
+    /* Spacing and Dimensions */
     height: calc(100vh - 150px);
+    /* Other Settings */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#chats-list .cs_chat{
+    /* Style */
+    background-color: #ffffff;
+    border-bottom: 0.1px solid #eaeaea;
+    /* Spacing and Dimensions */
+    height: 60px;
+}
+
+
+#chats-list .contact_image{
+    width: 45px;
+    border-radius: 50%;
 }

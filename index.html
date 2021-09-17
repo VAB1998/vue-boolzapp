@@ -49,10 +49,16 @@
 
                         <!-- ------Chats List------ -->
                         <div id="chats-list">
-                            <div class="row row-cols-12">
+                            <div class="row row-cols-1">
                                 <div class="cs_chat col" v-for="(itemContacts, indexContacts) in contacts">
-                                    <img class="contact_image"  :src="imagePathCreator(itemContacts)" alt="">
-                                    <span class="contact_name">{{itemContacts.name}}</span>
+                                    <div class="row gx-0 h-100 align-items-center">
+                                        <div class="col-3 text-center">
+                                            <img class="contact_image"  :src="imagePathCreator(itemContacts)" alt="">
+                                        </div>
+                                        <div class="col-9">
+                                            <span class="contact_name">{{itemContacts.name}}</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
