@@ -1,0 +1,25 @@
+
+/* ------User Bar------ */
+#user_bar{
+    height: 50px;
+    background-color: #eaeaea;
+}
+
+/* ------Alerts Bar------ */
+#alerts_bar{
+    height: 60px;
+    background-color: #8edafc;
+}
+
+/* ------Search Bar------ */
+#search_bar{
+    height: 40px;
+    background-color: #e3e3e3;
+}
+
+
+/* ------Chats List----- */
+#chats-list{
+    overflow-y: scroll;
+    height: calc(100vh - 150px);
+}

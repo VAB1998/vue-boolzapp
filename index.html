@@ -21,12 +21,50 @@
 </head>
 <body>
     <div id="app">
-       <ul id="chats-list">
-        <li  v-for="(itemContacts, indexContacts) in contacts">
-            <img class="contact_image"  :src="imagePathCreator(itemContacts)" alt="">
-            <span class="contact_name">{{itemContacts.name}}</span>
-        </li>
-       </ul>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-4">
+                    <!-- ------Start Side------ -->
+                    <section id="start_side">
+                        <!-- ------User Bar------ -->
+                        <div id="user_bar">
+                            <div class="row">
+                                <div class="col-12"></div>
+                            </div>
+                        </div>
+
+                        <!-- ------Alerts Bar------ -->
+                        <div id="alerts_bar">
+                            <div class="row">
+                                <div class="col-12"></div>
+                            </div>
+                        </div>
+
+                        <!-- ------Search Bar------ -->
+                        <div id="search_bar">
+                            <div class="row">
+                                <div class="col-12"></div>
+                            </div>
+                        </div>
+
+                        <!-- ------Chats List------ -->
+                        <div id="chats-list">
+                            <div class="row row-cols-12">
+                                <div class="cs_chat col" v-for="(itemContacts, indexContacts) in contacts">
+                                    <img class="contact_image"  :src="imagePathCreator(itemContacts)" alt="">
+                                    <span class="contact_name">{{itemContacts.name}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section >
+                 
+               
+                </div>
+            </div>
+       
+          
+        </div>
+       
     </div>
 
     <!-- JS Import -->
