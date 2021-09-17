@@ -1,6 +1,10 @@
 
+#start_side{
+    border-right: 0.1px solid #dfdfdf;
+}
 /* ------User Bar------ */
-#user_bar{
+#user_bar,
+#current_chat_bar{
     /* Style */
     background-color: #eaeaea;
     /* Spacing and Dimensions */
@@ -36,13 +40,16 @@
 #chats-list .cs_chat{
     /* Style */
     background-color: #ffffff;
-    border-bottom: 0.1px solid #eaeaea;
+    border-bottom: 0.1px solid #dfdfdf;
     /* Spacing and Dimensions */
     height: 60px;
 }
 
 
 #chats-list .contact_image{
-    width: 45px;
+    /* Style */
     border-radius: 50%;
+    /* Spacing and Dimensions */
+    width: 45px;
 }
+
