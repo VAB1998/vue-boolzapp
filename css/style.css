@@ -1,10 +1,9 @@
-
+/* ------------Start Side------------ */
 #start_side{
     border-right: 0.1px solid #dfdfdf;
 }
 /* ------User Bar------ */
-#user_bar,
-#current_chat_bar{
+.cs_bar{
     /* Style */
     background-color: #eaeaea;
     /* Spacing and Dimensions */
@@ -22,7 +21,7 @@
 /* ------Search Bar------ */
 #search_bar{
     /* Style */
-    background-color: #e3e3e3;
+    background-color: #fafafa;
     /* Spacing and Dimensions */
     height: 40px;
 }
@@ -53,3 +52,37 @@
     width: 45px;
 }
 
+/* ------------Current Chat Section------------ */
+/* ------Current Chat Section------ */
+#current_chat_messanger{
+    /* Style */
+    background-image: url(../img/mine.jpg);
+    /* Spacing and Dimensions */
+    height: calc(100vh - 100px);
+    /* Other Settings */
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+#message_box{
+    background-color: #f3eeea;
+    /* Spacing and Dimensions */
+    height: 50px;
+}
+
+#current_chat_messanger .sent_message{
+    background-color: #d5f9ba;
+    float: right;
+    padding: 8px;
+    min-width: 30%;
+    max-width: 40%;
+}
+#current_chat_messanger .received_message{
+    background-color: #ffffff;
+    float: left;
+    padding: 8px;
+    min-width: 30%;
+    max-width: 40%;
+    
+}
