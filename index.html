@@ -21,9 +21,14 @@
 </head>
 <body>
     <div id="app">
-       
+       <ul id="chats-list">
+        <li  v-for="(itemContacts, indexContacts) in contacts">
+            <img class="contact_image"  :src="imagePathCreator(itemContacts)" alt="">
+            <span class="contact_name">{{itemContacts.name}}</span>
+        </li>
+       </ul>
     </div>
-    
+
     <!-- JS Import -->
     <script type="text/javascript" src="javascript/script.js">
     </script>
