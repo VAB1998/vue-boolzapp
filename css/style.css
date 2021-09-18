@@ -1,13 +1,25 @@
-/* ------------Start Side------------ */
-#start_side{
-    border-right: 0.1px solid #dfdfdf;
-}
 /* ------User Bar------ */
 .cs_bar{
     /* Style */
     background-color: #eaeaea;
     /* Spacing and Dimensions */
-    height: 50px;
+    height: 60px;
+}
+
+.profile_image{
+    /* Style */
+    border-radius: 50%;
+    /* Spacing and Dimensions */
+    width: 50px;
+}
+/* ------------Start Side------------ */
+#start_side{
+    border-right: 0.1px solid #dfdfdf;
+}
+
+#user_bar .user_settings{
+    color: #b1b1b1;
+    font-size: 1.2rem;
 }
 
 /* ------Alerts Bar------ */
@@ -42,14 +54,6 @@
     border-bottom: 0.1px solid #dfdfdf;
     /* Spacing and Dimensions */
     height: 60px;
-}
-
-
-#chats-list .contact_image{
-    /* Style */
-    border-radius: 50%;
-    /* Spacing and Dimensions */
-    width: 45px;
 }
 
 /* ------------Current Chat Section------------ */

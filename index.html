@@ -28,8 +28,18 @@
                     <section id="start_side">
                         <!-- ------User Bar------ -->
                         <div id="user_bar" class="cs_bar">
-                            <div class="row">
-                                <div class="col-12"></div>
+                            <div class="row h-100">
+                                <div class="col-12 d-flex justify-content-between align-items-center">
+                                    <div class="user_profile">
+                                        <img class="profile_image" src="img/avatar_io.jpg" alt="Profile Image">
+                                        <span>Pippo</span>
+                                    </div>
+                                    <div class="user_settings">
+                                        <i class="fas fa-circle-notch mx-2"></i>
+                                        <i class="fas fa-comment-alt mx-2"></i>
+                                        <i class="fas fa-ellipsis-v mx-2"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -50,14 +60,14 @@
                         <!-- ------Chats List------ -->
                         <div id="chats-list">
                             <div class="row row-cols-1">
-                                <div class="cs_chat col" v-for="(itemContacts, indexContacts) in contacts">
-                                    <div class="row gx-0 h-100 align-items-center">
-                                        <div class="col-3 text-center">
-                                            <img class="contact_image"  :src="imagePathCreator(itemContacts)" alt="">
-                                        </div>
-                                        <div class="col-9">
-                                            <span class="contact_name">{{itemContacts.name}}</span>
-                                        </div>
+                                <div class="cs_chat col d-flex justify-content-between align-items-center" v-for="(itemContacts, indexContacts) in contacts">
+                                    
+                                    <div class="contact_profile">
+                                        <img class="profile_image"  :src="imagePathCreator(itemContacts)" alt="">
+                                        <span class="contact_name">{{itemContacts.name}}</span>
+                                    </div>
+                                    <div class="message_date">                      
+                                        <span>La data<span>
                                     </div>
                                 </div>
                             </div>
