@@ -12,6 +12,12 @@
     /* Spacing and Dimensions */
     width: 50px;
 }
+
+
+.message_date{
+    font-size: .6rem;
+    color: #b1b1b1;
+}
 /* ------------Start Side------------ */
 #start_side{
     border-right: 0.1px solid #dfdfdf;
@@ -40,7 +46,7 @@
 
 
 /* ------Chats List----- */
-#chats-list{
+#chats_list {
     /* Spacing and Dimensions */
     height: calc(100vh - 150px);
     /* Other Settings */
@@ -48,13 +54,19 @@
     overflow-x: hidden;
 }
 
-#chats-list .cs_chat{
+#chats_list  .cs_chat{
     /* Style */
     background-color: #ffffff;
     border-bottom: 0.1px solid #dfdfdf;
     /* Spacing and Dimensions */
     height: 60px;
 }
+
+#chats_list .selected_contact{
+    background-color: #e9ebeb;
+}
+
+
 
 /* ------------Current Chat Section------------ */
 /* ------Current Chat Section------ */
@@ -99,3 +111,4 @@
     min-width: 30%;
     max-width: 40%;
 }
+
