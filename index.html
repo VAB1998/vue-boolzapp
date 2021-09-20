@@ -123,7 +123,7 @@
                                         <i class="far fa-smile"></i>
                                     </div>
                                     <div class="write_message flex-grow-1">
-                                        <input class="w-100 h-100" type="text" placeholder="Scrivi un messaggio">
+                                        <input v-on:keyup.enter="sendMessage()"  v-model="message" class="w-100 h-100" type="text" placeholder="Scrivi un messaggio">
                                     </div>
                                     <div class="voice_message">
                                         <i class="fas fa-microphone"></i>

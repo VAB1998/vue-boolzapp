@@ -115,8 +115,30 @@ let app = new Vue({
         selectContact : function(index){
             this.selectedContact = index
             console.log(app.selectedContact)
-        }
+        },
 
+        sendMessage(){  
+
+            const messageToAdd = {
+                
+                date: this.getCurrentDate(),
+                text: this.message,
+                status: 'sent'
+            }
+            
+            this.message== '' ? '' : this.contacts[this.selectedContact].messages.push(messageToAdd)
+            this.message = ''
+            
+            //Check
+            console.log(this.contacts[this.selectedContact].messages)
+        },
+        
+        getCurrentDate(){
+            
+          let currentDate = new Date()
+          currentDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`
+          return currentDate
+        }
     }
 });
 
