@@ -132,7 +132,7 @@ body{
     height: 40px;
 }
 
-/* ------Current Chat Messanger */
+/* ------Current Chat Messanger------ */
 #current_chat_messanger .sent_message{
     /* Style */
     background-color: #d5f9ba;
@@ -140,6 +140,7 @@ body{
     align-self: flex-end;
 
 }
+
 #current_chat_messanger .received_message{
     /* Style */
     background-color: #ffffff;

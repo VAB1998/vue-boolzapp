@@ -170,16 +170,24 @@ let app = new Vue({
         },
 
 
-        searchContact(item){
+        // searchContact(item){
             
-            const names = []
-            for(index of this.contacts){
-                names.push(index.name)   
-            }
-            console.log(names)
+        //     const names = []
+        //     for(index of this.contacts){
+        //         names.push(index.name)   
+        //     }
+        //     console.log(names)
             
-            return item.name.toLowerCase().includes(this.search.toLowerCase())
+        //     return item.name.toLowerCase().includes(this.search.toLowerCase())
 
+        // },
+        searchContact(){
+            
+            for(item of this.contacts){
+                item.visible = item.name.toLowerCase().includes(this.search.toLowerCase())
+                // Check
+                console.log(item.name, item.visible)
+            }
         }
     }
 });
