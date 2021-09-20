@@ -104,7 +104,8 @@ let app = new Vue({
         ],
 
         selectedContact : 0,
-        message : ''
+        message : '',
+        search : '',
     },
   
     methods: {
@@ -166,6 +167,25 @@ let app = new Vue({
           let currentDate = new Date()
           currentDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`
           return currentDate
+        },
+
+        searchContact(){
+            const names = []
+            for(index of this.contacts){
+                names.push(index.name)
+                
+            }
+            console.log(names)
+
+            
+
+            let result = names.filter((item, index) =>{
+                return item.toLowerCase().includes(this.search.toLowerCase())
+
+            })
+            console.log(result)
+
+            
         }
     }
 });

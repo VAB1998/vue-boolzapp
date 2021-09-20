@@ -56,7 +56,9 @@
                                 <div class="col-12">
                                     <div class="input-group">
                                         <button class="btn btn-outline-secondary" ><i class="fas fa-search"></i></button>
-                                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" >
+                                        <input type="text" class="form-control" v-model="search" 
+                                        placeholder="Cerca o inizia una nuova chat" 
+                                        v-on:keyup.enter="searchContact()">
                                     </div>
                                 </div>
                             </div>
