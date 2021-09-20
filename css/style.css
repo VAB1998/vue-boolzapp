@@ -1,6 +1,8 @@
 body{
     overflow-x: hidden;
 }
+
+/* ------Common Style------ */
 .cs_bar{
     /* Style */
     background-color: #eaeaea;
@@ -15,16 +17,32 @@ body{
     width: 50px;
 }
 
-.user_settings{
-    color: #b1b1b1;
-    font-size: 1.2rem;
-}
-
-
 .message_date{
+    /* Style */
     font-size: .6rem;
     color: #b1b1b1;
 }
+
+.icon_wrapper{
+    /* Style */
+    font-size: 1.2rem;
+    border-radius: 50%;
+    color: #b1b1b1;
+    /* Other settings */
+    display: inline-block;
+    cursor: pointer;
+    transition: .3s linear;
+    /* Centering the Icons */
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.icon_wrapper:hover{
+    background-color: #f2fbff;
+}
+
 /* ------------Start Side------------ */
 #start_side{
     border-right: 0.1px solid #dfdfdf;
@@ -43,7 +61,7 @@ body{
     background-color: #f2fbff;
     font-size: 1.2rem;
     border-radius: 50%;
-    color: #8edafc;    
+    color: #8edafc;
     /* Other settings */
     display: inline-block;
     /* Centering the Icons */
@@ -57,9 +75,7 @@ body{
 #search_bar{
     /* Style */
     background-color: #fafafa;
-    /* Spacing and Dimensions */
 }
-
 
 /* ------Chats List----- */
 #chats_list {
@@ -70,7 +86,7 @@ body{
     overflow-x: hidden;
 }
 
-#chats_list  .cs_chat{
+#chats_list .cs_chat{
     /* Style */
     background-color: #ffffff;
     border-bottom: 0.1px solid #dfdfdf;
@@ -79,10 +95,9 @@ body{
 }
 
 #chats_list .selected_contact{
+    /* Style */
     background-color: #e9ebeb;
 }
-
-
 
 /* ------------Current Chat Section------------ */
 /* ------Current Chat Section------ */
@@ -98,6 +113,7 @@ body{
 
 }
 
+/* ------Message Box------ */
 #message_box{
     background-color: #f3eeea;
     /* Spacing and Dimensions */
@@ -116,6 +132,7 @@ body{
     height: 40px;
 }
 
+/* ------Current Chat Messanger */
 #current_chat_messanger .sent_message{
     /* Style */
     background-color: #d5f9ba;
@@ -139,4 +156,3 @@ body{
     min-width: 30%;
     max-width: 40%;
 }
-

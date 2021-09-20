@@ -35,9 +35,15 @@
                                         <span>Pippo</span>
                                     </div>
                                     <div class="user_settings">
-                                        <i class="fas fa-circle-notch mx-2"></i>
+                                        <div class="icon_wrapper">
+                                            <i class="fas fa-circle-notch mx-2"></i>
+                                        </div>
+                                        <div class="icon_wrapper">
                                         <i class="fas fa-comment-alt mx-2"></i>
-                                        <i class="fas fa-ellipsis-v mx-2"></i>
+                                        </div>
+                                        <div class="icon_wrapper">
+                                            <i class="fas fa-ellipsis-v mx-2"></i>
+                                        </div>    
                                     </div>
                                 </div>
                             </div>
@@ -106,9 +112,15 @@
                                         <span class="contact_name">{{contacts[selectedContact].name}}</span>
                                     </div>
                                     <div class="user_settings">
-                                        <i class="fas fa-search mx-2"></i>
-                                        <i class="fas fa-paperclip mx-2"></i>
-                                        <i class="fas fa-ellipsis-v mx-2"></i>
+                                        <div class="icon_wrapper">
+                                            <i class="fas fa-search mx-2"></i>
+                                        </div>
+                                        <div class="icon_wrapper">
+                                            <i class="fas fa-paperclip mx-2"></i>
+                                        </div>
+                                        <div class="icon_wrapper">
+                                            <i class="fas fa-ellipsis-v mx-2"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -140,13 +152,17 @@
                                 <div class="col-12 d-flex align-items-center">
                                     
                                     <div class="message_reactions">
-                                        <i class="far fa-smile"></i>
+                                        <div class="icon_wrapper">
+                                            <i class="far fa-smile"></i>
+                                        </div>
                                     </div>
                                     <div class="write_message flex-grow-1">
                                         <input v-on:keyup.enter="sendMessage()"  v-model="message" class="w-100 h-100" type="text" placeholder="Scrivi un messaggio">
                                     </div>
                                     <div class="voice_message">
-                                        <i class="fas fa-microphone"></i>
+                                        <div class="icon_wrapper">
+                                            <i class="fas fa-microphone"></i>
+                                        </div>
                                     </div>
 
                                 </div>
