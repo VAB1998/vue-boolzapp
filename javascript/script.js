@@ -103,7 +103,8 @@ let app = new Vue({
             },
         ],
 
-        selectedContact : 0
+        selectedContact : 0,
+        message : ''
     },
   
     methods: {

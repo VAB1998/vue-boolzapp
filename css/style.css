@@ -1,4 +1,6 @@
-/* ------User Bar------ */
+body{
+    overflow-x: hidden;
+}
 .cs_bar{
     /* Style */
     background-color: #eaeaea;
@@ -41,14 +43,13 @@
     /* Style */
     background-color: #fafafa;
     /* Spacing and Dimensions */
-    height: 40px;
 }
 
 
 /* ------Chats List----- */
 #chats_list {
     /* Spacing and Dimensions */
-    height: calc(100vh - 150px);
+    height: calc(100vh - 174px);
     /* Other Settings */
     overflow-y: scroll;
     overflow-x: hidden;
@@ -74,7 +75,7 @@
     /* Style */
     background-image: url(../img/mine.jpg);
     /* Spacing and Dimensions */
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     /* Other Settings */
     overflow-y: scroll;
     overflow-x: hidden;
@@ -85,7 +86,19 @@
 #message_box{
     background-color: #f3eeea;
     /* Spacing and Dimensions */
-    height: 50px;
+    height: 60px;
+}
+
+#message_box .message_reactions,
+#message_box .voice_message{
+    font-size: 1.5rem;
+    color: #b1b1b1;
+    width: 60px;
+    text-align: center;
+
+}
+#message_box .write_message{
+    height: 40px;
 }
 
 #current_chat_messanger .sent_message{
