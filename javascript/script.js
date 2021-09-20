@@ -4,7 +4,14 @@ MILESTONE 1
   (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse
 - Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, 
   visualizzare nome e immagine di ogni contatto.
+
+  MILESTONE 2
+- Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare 
+  tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
+- Click sul contatto mostra la conversazione del contatto cliccato
+
 */
+
 let app = new Vue({
     el: '#app',
   
@@ -95,11 +102,20 @@ let app = new Vue({
                 ],
             },
         ],
+
+        selectedContact : 0
     },
   
     methods: {
         imagePathCreator : function(object){
             return  `img/avatar${object.avatar}.jpg` ;
+        },
+
+        selectContact : function(index){
+            this.selectedContact = index
+            console.log(app.selectedContact)
         }
+
     }
-  }); 
+});
+

@@ -60,7 +60,9 @@
                         <!-- ------Chats List------ -->
                         <div id="chats-list">
                             <div class="row row-cols-1">
-                                <div class="cs_chat col d-flex justify-content-between align-items-center" v-for="(itemContacts, indexContacts) in contacts">
+                                <div class="cs_chat col d-flex justify-content-between align-items-center" 
+                                v-for="(itemContacts, indexContacts) in contacts" 
+                                @click="selectContact(indexContacts)">
                                     
                                     <div class="contact_profile">
                                         <img class="profile_image"  :src="imagePathCreator(itemContacts)" alt="">
@@ -89,16 +91,17 @@
                         <!-- ------Current Chat Messanger------ -->
                         <div id="current_chat_messanger">
                             <div class="row">
-                                <div class="col-12 d-flex flex-column">
-                                    <div class="sent_message message" >
-                                        <span>Hai portato a spasso il cane?</span>
-                                    </div>
+                                <div class="col-12 d-flex flex-column" v-for="(itemContacts) in contacts[selectedContact]">
+                                    
+                                    {{itemContacts}}
+                                   
+                                    <!--
                                     <div class="sent_message message" >
                                         <span>Ricordati di dargli da mangiare</span>
                                     </div>
                                     <div class="received_message message" >
                                         <span>Tutto fatto!</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
