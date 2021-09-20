@@ -28,7 +28,7 @@
                     <section id="start_side">
                         <!-- ------User Bar------ -->
                         <div id="user_bar" class="cs_bar">
-                            <div class="row h-100">
+                            <div class="row h-100 px-2">
                                 <div class="col-12 d-flex justify-content-between align-items-center">
                                     <div class="user_profile">
                                         <img class="profile_image" src="img/avatar_io.jpg" alt="Profile Image">
@@ -45,8 +45,16 @@
 
                         <!-- ------Alerts Bar------ -->
                         <div id="alerts_bar">
-                            <div class="row">
-                                <div class="col-12"></div>
+                            <div class="row h-100 px-2">
+                                <div class="col-12 d-flex justify-content-between align-items-center">
+                                    <div class="alert_icon_wrapper">
+                                        <i class="fas fa-bell-slash"></i>
+                                    </div>
+                                    <div class="alert_icon_info">
+                                        <span>Ricevi notifiche di nuovi messaggi</span>
+                                        <a href="#">Attiva notifiche desktop</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -66,7 +74,7 @@
 
                         <!-- ------Chats List------ -->
                         <div id="chats_list">
-                            <div class="row row-cols-1">
+                            <div class="row row-cols-1 px-2">
                                 <div class="cs_chat col d-flex justify-content-between align-items-center"
                                 v-for="(itemContacts, indexContacts) in contacts" :class="{ selected_contact : indexContacts == selectedContact}"
                                 @click="selectContact(indexContacts)" v-if="searchContact(itemContacts)">
@@ -91,8 +99,18 @@
                     <section id="current_chat">
                          <!-- ------Current Chat Bar------ -->
                         <div id="current_chat_bar" class="cs_bar">
-                            <div class="row">
-                                <div class="col-12"></div>
+                            <div class="row h-100 px-2">
+                                <div class="col-12 d-flex justify-content-between align-items-center">
+                                    <div class="user_profile">
+                                        <img class="profile_image" :src="imagePathCreator(contacts[selectedContact])" alt="Profile Image">
+                                        <span class="contact_name">{{contacts[selectedContact].name}}</span>
+                                    </div>
+                                    <div class="user_settings">
+                                        <i class="fas fa-search mx-2"></i>
+                                        <i class="fas fa-paperclip mx-2"></i>
+                                        <i class="fas fa-ellipsis-v mx-2"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

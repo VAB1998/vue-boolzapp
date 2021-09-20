@@ -181,11 +181,5 @@ let app = new Vue({
             return item.name.toLowerCase().includes(this.search.toLowerCase())
 
         }
-
-
-
     }
-
-
 });
-

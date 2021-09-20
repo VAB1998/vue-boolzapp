@@ -15,6 +15,11 @@ body{
     width: 50px;
 }
 
+.user_settings{
+    color: #b1b1b1;
+    font-size: 1.2rem;
+}
+
 
 .message_date{
     font-size: .6rem;
@@ -25,17 +30,27 @@ body{
     border-right: 0.1px solid #dfdfdf;
 }
 
-#user_bar .user_settings{
-    color: #b1b1b1;
-    font-size: 1.2rem;
-}
-
 /* ------Alerts Bar------ */
 #alerts_bar{
     /* Style */
     background-color: #8edafc;
     /* Spacing and Dimensions */
     height: 60px;
+}
+
+#alerts_bar .alert_icon_wrapper {
+    /* Style */
+    background-color: #f2fbff;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    color: #8edafc;    
+    /* Other settings */
+    display: inline-block;
+    /* Centering the Icons */
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
 }
 
 /* ------Search Bar------ */
