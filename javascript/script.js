@@ -108,6 +108,11 @@ let app = new Vue({
     },
   
     methods: {
+        /**
+         * Create a path to the image.
+         * @param {object} object The object from where to extract the necessary info.
+         * @returns A string which represtents the path to the image.
+         */
         imagePathCreator : function(object){
             return  `img/avatar${object.avatar}.jpg` ;
         },
@@ -117,6 +122,10 @@ let app = new Vue({
             console.log(app.selectedContact)
         },
 
+        /**
+         * Creates an object which contains all the info(date,text,status)
+         * and push it into the selectedContact messages array.
+         */
         sendMessage(){  
 
             const messageToAdd = {
@@ -133,6 +142,10 @@ let app = new Vue({
             console.log(this.contacts[this.selectedContact].messages)
         },
         
+        /**
+         * Replies to the sent message creating a new object
+         * which contains all the info(date,text,status).
+         */
         replyToTheMessage(){
 
             const messageToAdd = {
@@ -143,10 +156,11 @@ let app = new Vue({
             }
 
             this.contacts[this.selectedContact].messages.push(messageToAdd)
-           
-
         },
 
+        /**
+         * @returns A string with the date and time the function has been called.
+         */
         getCurrentDate(){
             
           let currentDate = new Date()
