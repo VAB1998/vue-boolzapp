@@ -128,11 +128,25 @@ let app = new Vue({
             
             this.message== '' ? '' : this.contacts[this.selectedContact].messages.push(messageToAdd)
             this.message = ''
-            
+            setTimeout(this.replyToTheMessage, 1000);
             //Check
             console.log(this.contacts[this.selectedContact].messages)
         },
         
+        replyToTheMessage(){
+
+            const messageToAdd = {
+                
+                date: this.getCurrentDate(),
+                text: 'ok',
+                status: 'received'
+            }
+
+            this.contacts[this.selectedContact].messages.push(messageToAdd)
+           
+
+        },
+
         getCurrentDate(){
             
           let currentDate = new Date()
