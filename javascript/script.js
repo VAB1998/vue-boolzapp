@@ -169,24 +169,23 @@ let app = new Vue({
           return currentDate
         },
 
-        searchContact(){
+
+        searchContact(item){
+            
             const names = []
             for(index of this.contacts){
-                names.push(index.name)
-                
+                names.push(index.name)   
             }
             console.log(names)
-
             
+            return item.name.toLowerCase().includes(this.search.toLowerCase())
 
-            let result = names.filter((item, index) =>{
-                return item.toLowerCase().includes(this.search.toLowerCase())
-
-            })
-            console.log(result)
-
-            
         }
+
+
+
     }
+
+
 });
 
