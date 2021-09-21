@@ -144,6 +144,7 @@ let app = new Vue({
             }
 
             this.contacts[this.selectedContact].messages.push(messageToAdd)
+            console.log(this.contacts[this.selectedContact].messages)
         },
 
         /**
@@ -182,7 +183,7 @@ let app = new Vue({
         
             this.contacts[this.selectedContact].messages.splice(index, 1)
             //Check
-            console.log(this.contacts)
+            console.log(this.contacts[this.selectedContact].messages)
         }
         
     },

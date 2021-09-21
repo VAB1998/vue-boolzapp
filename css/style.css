@@ -115,7 +115,7 @@ body{
 
 #current_chat_messanger .message .message_settings{
     color: transparent;
-    float: right;
+    align-self: flex-start;
     background-color: transparent;
     border: none;
 }

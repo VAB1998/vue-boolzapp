@@ -137,13 +137,13 @@
                                     <div class="message " 
                                     :class="{ sent_message : itemContacts.status == 'sent' , received_message : itemContacts.status == 'received' }" >
                                         
-                                        <div class="message_texts">
+                                        <div class="message_texts d-flex justify-content-between">
 
                                             <span>{{itemContacts.text}}</span>
                              
                                             <select id="prova" class="message_settings">
                                                 <i class="fas fa-chevron-down"></i>
-                                                <option  class="option_type" value="ciao">Altro</option>    
+                                                <option  class="option_type" value="ciao">Settings</option>    
                                                 <option  class="option_type" value="delete"  v-on:click="deleteMessage(indexContacts)">Delete</option>    
                                             </select>
                                         </div>
