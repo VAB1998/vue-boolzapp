@@ -183,11 +183,14 @@ let app = new Vue({
         // },
         searchContact(){
             
+            console.clear()
             for(item of this.contacts){
                 item.visible = item.name.toLowerCase().includes(this.search.toLowerCase())
                 // Check
                 console.log(item.name, item.visible)
             }
         }
+
+        
     }
 });

@@ -113,6 +113,16 @@ body{
 
 }
 
+#current_chat_messanger .message .message_settings{
+    color: transparent;
+    float: right;
+    background-color: transparent;
+    border: none;
+}
+#current_chat_messanger .message:hover .message_settings{
+    color: #b1b1b1;
+}
+
 /* ------Message Box------ */
 #message_box{
     background-color: #f3eeea;
