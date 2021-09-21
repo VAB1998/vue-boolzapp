@@ -106,6 +106,7 @@ let app = new Vue({
         selectedContact : 0,
         message : '',
         search : '',
+        
     },
   
     methods: {
@@ -189,8 +190,15 @@ let app = new Vue({
                 // Check
                 console.log(item.name, item.visible)
             }
-        }
-
+        },
         
-    }
+        
+        deleteMessage :function(index){
+        
+            this.contacts[this.selectedContact].messages.splice(index, 1)
+            //Check
+            console.log(this.contacts)
+        }
+        
+    },
 });

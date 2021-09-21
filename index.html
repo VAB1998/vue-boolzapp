@@ -138,11 +138,13 @@
                                     :class="{ sent_message : itemContacts.status == 'sent' , received_message : itemContacts.status == 'received' }" >
                                         
                                         <div class="message_texts">
+
                                             <span>{{itemContacts.text}}</span>
-                                            
-                                            <select name="" class="message_settings">
+                             
+                                            <select id="prova" class="message_settings">
                                                 <i class="fas fa-chevron-down"></i>
-                                                <option class="option_type" value="delete">Delete</option>   
+                                                <option  class="option_type" value="ciao">Altro</option>    
+                                                <option  class="option_type" value="delete"  v-on:click="deleteMessage(indexContacts)">Delete</option>    
                                             </select>
                                         </div>
                                         <div class="message_date float-end">
