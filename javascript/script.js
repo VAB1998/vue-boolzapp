@@ -94,7 +94,7 @@ let app = new Vue({
         search : '',
         
     },
-  
+
     methods: {
         /**
          * Create a path to the image.
@@ -123,9 +123,11 @@ let app = new Vue({
                 status: 'sent'
             }
             
-            this.message== '' ? '' : this.contacts[this.selectedContact].messages.push(messageToAdd)
+            if(this.message.trim() != '') {
+                this.contacts[this.selectedContact].messages.push(messageToAdd)
+                setTimeout(this.replyToTheMessage, 1000);
+            } 
             this.message = ''
-            setTimeout(this.replyToTheMessage, 1000);
             //Check
             console.log(this.contacts[this.selectedContact].messages)
         },
@@ -152,28 +154,16 @@ let app = new Vue({
          */
         getCurrentDate(){
             
-          let currentDate = new Date()
-          currentDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`
-          return currentDate
+            let currentDate = new Date()
+            currentDate = `${currentDate.getDate()}/${(currentDate.getMonth()+1)}/${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`
+            return currentDate
         },
 
-
-        // searchContact(item){
-            
-        //     const names = []
-        //     for(index of this.contacts){
-        //         names.push(index.name)   
-        //     }
-        //     console.log(names)
-            
-        //     return item.name.toLowerCase().includes(this.search.toLowerCase())
-
-        // },
         searchContact(){
             
             console.clear()
             for(item of this.contacts){
-                item.visible = item.name.toLowerCase().includes(this.search.toLowerCase())
+                item.visible = item.name.toLowerCase().includes(this.search.toLowerCase().trim())
                 // Check
                 console.log(item.name, item.visible)
             }
@@ -184,7 +174,18 @@ let app = new Vue({
             this.contacts[this.selectedContact].messages.splice(index, 1)
             //Check
             console.log(this.contacts[this.selectedContact].messages)
-        }
-        
+        }        
     },
 });
+
+ // searchContact(item){
+            
+    //     const names = []
+    //     for(index of this.contacts){
+    //         names.push(index.name)   
+    //     }
+    //     console.log(names)
+        
+    //     return item.name.toLowerCase().includes(this.search.toLowerCase())
+
+    // },

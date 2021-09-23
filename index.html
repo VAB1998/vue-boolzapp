@@ -85,13 +85,13 @@
                             <div class="row row-cols-1 px-2">
                                 <div class="cs_chat col d-flex justify-content-between align-items-center"
                                 v-for="(itemContacts, indexContacts) in contacts" :class="{ selected_contact : indexContacts == selectedContact}"
-                                @click="selectContact(indexContacts)" v-if="contacts[indexContacts].visible">
+                                @click="selectContact(indexContacts)" v-if="itemContacts.visible">
                                     
                                 <div class="contact_profile" >
                                         
                                     <img class="profile_image"  :src="imagePathCreator(itemContacts)" alt="">
                                     <span class="contact_name">{{itemContacts.name}}</span>
-                    
+                                    
                                     <div class="message_date">                      
                                         <span><span>
                                     </div>
@@ -106,7 +106,7 @@
                 <div id="vi" class="col-8">
                     <!-- ------Current Chat------ -->
                     <section id="current_chat">
-                         <!-- ------Current Chat Bar------ -->
+                        <!-- ------Current Chat Bar------ -->
                         <div id="current_chat_bar" class="cs_bar">
                             <div class="row h-100 px-2">
                                 <div class="col-12 d-flex justify-content-between align-items-center">
@@ -140,17 +140,17 @@
                                         <div class="message_texts d-flex justify-content-between">
 
                                             <span>{{itemContacts.text}}</span>
-                             
+                                            
                                             <select id="prova" class="message_settings">
                                                 <i class="fas fa-chevron-down"></i>
                                                 <option  class="option_type" value="ciao">Settings</option>    
                                                 <option  class="option_type" value="delete"  v-on:click="deleteMessage(indexContacts)">Delete</option>    
                                             </select>
+                                            
                                         </div>
                                         <div class="message_date float-end">
                                             <span>{{itemContacts.date}}</span>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
